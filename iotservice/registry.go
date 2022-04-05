@@ -6,15 +6,15 @@ import (
 )
 
 type MethodCall struct {
-	MethodName      string                 `json:"methodName,omitempty"`
-	ConnectTimeout  uint                   `json:"connectTimeoutInSeconds,omitempty"`
-	ResponseTimeout uint                   `json:"responseTimeoutInSeconds,omitempty"`
-	Payload         map[string]interface{} `json:"payload,omitempty"`
+	MethodName      string      `json:"methodName,omitempty"`
+	ConnectTimeout  uint        `json:"connectTimeoutInSeconds,omitempty"`
+	ResponseTimeout uint        `json:"responseTimeoutInSeconds,omitempty"`
+	Payload         interface{} `json:"payload,omitempty"`
 }
 
 type MethodResult struct {
-	Status  int                    `json:"status,omitempty"`
-	Payload map[string]interface{} `json:"payload,omitempty"`
+	Status  int         `json:"status,omitempty"`
+	Payload interface{} `json:"payload,omitempty"`
 }
 
 type DeviceStatus string
